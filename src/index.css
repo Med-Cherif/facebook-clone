@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sidebar::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+}
+
+.sidebar.show-scrollbar::-webkit-scrollbar {
+    display: block;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background: rgb(182, 182, 182);
+}
+
+.online-contact::-webkit-scrollbar {
+    width: 10px;
+}
+
+.online-contact::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.online-contact::-webkit-scrollbar-track {
+    border-radius: 30px;
+    background: rgb(182, 182, 182);
+}
+
+.add-story::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 3px;
+    background: #fff;
+    width: 50%;
+}
+
+.add-story::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    background: #fff;
+    width: 3px;
+}
+
+.story::before {
+    content: "";
+    visibility: hidden;
+    position: absolute;
+    inset: 0;
+    background: #000;
+    opacity: .1;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.story:hover::before {
+    visibility: visible;
+}
